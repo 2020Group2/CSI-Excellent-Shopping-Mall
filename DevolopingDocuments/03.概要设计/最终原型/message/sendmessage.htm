@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style3 {color: #FF0000}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+	function sendmessage(){
+		window.location = "sendsucess.htm";
+	}
+	function savedraft(){
+		window.location = "savesucess.htm"
+	}
+	
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0">
+<div align="center"> 
+  <form action="" method="post" enctype="multipart/form-data" name="form1">
+    <br>
+    <table width="780" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td height="38">  <div align="center"> 发送留言<font size="3"></font> <font size="3"> </font></div>
+          <div align="center"></div></td>
+      </tr>
+    </table>
+	<table width="780" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td width="100%" height="398" ><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="B1BCEC">
+            <tr> 
+              <td height="361" bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999">
+                 
+				  <tr> 
+                    <td height="2"   bgcolor="#D3E3F5" ></td>
+                  </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">
+                  <tr bgcolor="#FFFFFF"> 
+                    <td width="20%"><div align="right">收件人员工号：</div></td>
+                    <td width="80%" height="29">                      <div align="left">
+                        <input type="text" name="textfield" size="50" height="20">
+                        <span class="style3">*</span>(内容不可为空） </div></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="29"><div align="right">收件人姓名：</div></td>
+                    <td><div align="left">
+                      <input type="text" name="textfield2" size="50" height="20">
+                      <span class="style3">*</span>(内容不可为空） </div></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="29"><div align="right">标题：</div></td>
+                    <td><div align="left">
+                      <input type="text" name="textfield3" size="50" height="20">
+                      <span class="style3">*</span>(内容不可为空） </div></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="210"><div align="right">内容：</div></td>
+                    <td><div align="left">
+                      <textarea name="textarea" style="width:80%;height:250px;" ></textarea>
+</div></td>
+                  </tr>
+              </table>
+			  <table width="780">
+		<tr>
+			<td width="284" height="23" >
+              <div align="right">
+                <input type="button" name = "send" value="发送" onClick="sendmessage()">				  
+            </div></td>
+		    <td width="19" >&nbsp;</td>
+		    <td width="55" ><input type="button" name="save" value="存草稿" onClick="savedraft()"></td>
+		    <td width="19" >&nbsp;</td>
+		    <td width="379" ><input type="reset" name="Submit2" value="重写"></td>
+	    </tr>
+	</table></td>
+            </tr>
+        </table>
+		
+	
+  </form>
+</div>
+</body>
+</html>
