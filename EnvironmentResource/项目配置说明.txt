@@ -1,0 +1,31 @@
+我们使用的项目配置跟老师的有一些不同，我重点说下需要注意的事项...
+
+1.配置文件主要有：
+src/main/resources 中：
+jdbc.properties（数据库相关配置，后面建议大家改成相同数据库名，和相同密码）
+logback.xml：日志相关配置，服务器运行的情况会以日期命名的方式存放到项目中，会自动生成一个文件夹老保存，这个不用管...
+mybatis-config.xml：mybatis的全局配置
+
+scr/main/resources/spring中：
+spring-dao：spring整合mybatis的相关配置
+spring-serviec：service层的相关配置
+spring-web：controller/web层的相关配置
+
+配置文件都设置好了路径，理论导入依赖后就可使用
+
+2.我将老师Mapper中java文件和mapper映射的配置文件独立分开，更符合规范一些...
+src/main/java中只存放java文件，其中entity、dao、service层已经搭好模板
+src/main/resources/mapper：是存放mapper配置文件的，配置路径和文件已设好，只需要根据你dao层的接口来写实现映射就行
+
+（重点）3.测试用例怎么写？
+如果要写测试，在src/test/java对应的包中（Dao层就用Dao层的包，对应好src/main/java中包名）
+（重点）其中每个测试类都需要继承已写好的BaseTest类，这个类是用于配置spring和junit，junit启动时加载springIOC容器
+测试可以使用 assertEquals(期望值，实际值) 方法，前面写你数据的期望值，后面写你数据的实际值，可以参考我已经写好的两个用例
+
+4.导入依赖后，测试自己的框架
+//我只做了UserAddress数据库的测试，随便加了两条数据进行测试
+Dao层：我在UserAddressDao接口以及它的mapper文件中写好了测试方法，只需要在src/test/java对应测试类中，右键JUnit就行
+Service层：同样直接运行我写好的测试用例就行
+Controller层：controller层的测试是直接运行Server，而不需要在test中写测试用例，访问http://localhost:8080/csiShop/superadmin/listuserAddress 看结果就行，具体测试逻辑可以看我写的controller层用例 
+
+5.前端文件存放：自己看webapp下的文件夹名字就能看懂存放内容
