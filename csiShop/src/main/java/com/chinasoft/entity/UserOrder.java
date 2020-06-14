@@ -2,14 +2,14 @@ package com.chinasoft.entity;
 
 import java.util.Date;
 
-public class Order {
+public class UserOrder {
 	
 	private Long orderId;
 	private int productNumber;
 	private String orderPrice;
 	private String orderDesc;
 	private String comments;
-	//0:Î´¸¶¿î 1£ºÒÑ¸¶¿î£¬¶©µ¥½øÐÐÖÐ  2£º¶©µ¥ÒÑÍê³É
+	//0:Î´ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½Ñ¸ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private Integer enableStatus;
 	private Date createTime;
 	private Date lastEditTime;
