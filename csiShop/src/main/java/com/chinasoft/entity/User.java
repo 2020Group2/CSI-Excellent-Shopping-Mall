@@ -106,7 +106,7 @@ public class User {
 	}
 	public User(Long userId, String name, String profileImg, String phone, String email, String gender,
 			Integer enableStatus, Date createTime, Date lastEditTime, List<UserAddress> userAddressList,
-			List<Order> orderList, List<ProductCollection> productCollectionList, List<ShopCar> shopCarList) {
+			List<UserOrder> orderList, List<ProductCollection> productCollectionList, List<ShopCar> shopCarList) {
 		super();
 		this.userId = userId;
 		this.name = name;
