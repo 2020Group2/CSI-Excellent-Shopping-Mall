@@ -2,6 +2,25 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.chinasoft.dao.ProductCategory">
-	
+<mapper namespace="com.chinasoft.dao.ProductCategoryDao">
+	<select id="queryProductCategory" resultType="productCategory">
+		SELECT 
+		product_category_id, product_category_name, priority, create_time ,last_edit_time, parent_id
+		FROM product_category
+		<where>
+			<!-- 如果传入null的条件，表示查询一级类别 -->
+			<if test="productCategoryCondition==null">
+				and parent_id is null
+			</if>
+			<!-- 如果传入的不为null，那表示查询子类别 -->
+			<if test="productCategoryCondition!=null">
+				and parent_id is not null
+			</if>
+			<if test="productCategoryCondition!=null and productCategoryCondition.parent!=null">
+				and parent_id = #{productCategoryCondition.parent.productCategoryId}
+			</if>
+		</where>
+		ORDER BY
+		priority DESC
+	</select>
 </mapper>

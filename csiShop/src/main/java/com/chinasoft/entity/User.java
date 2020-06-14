@@ -14,14 +14,14 @@ public class User {
 	private Date createTime;
 	private Date lastEditTime;
 	private List<UserAddress> userAddressList;
-	private List<Order> orderList;
+	private List<UserOrder> orderList;
 	private List<ProductCollection> productCollectionList;
 	private List<ShopCar> shopCarList;
 	
-	public List<Order> getOrderList() {
+	public List<UserOrder> getOrderList() {
 		return orderList;
 	}
-	public void setOrderList(List<Order> orderList) {
+	public void setOrderList(List<UserOrder> orderList) {
 		this.orderList = orderList;
 	}
 	public List<ProductCollection> getProductCollectionList() {
