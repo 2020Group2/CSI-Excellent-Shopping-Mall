@@ -4,17 +4,18 @@ import java.util.Date;
 
 public class UserAddress {
 
-	private Long AddrId;
+	private Long addrId;
 	private String content;
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
 	private Long userId;
+
 	public Long getAddrId() {
-		return AddrId;
+		return addrId;
 	}
 	public void setAddrId(Long addrId) {
-		AddrId = addrId;
+		this.addrId = addrId;
 	}
 	public String getContent() {
 		return content;

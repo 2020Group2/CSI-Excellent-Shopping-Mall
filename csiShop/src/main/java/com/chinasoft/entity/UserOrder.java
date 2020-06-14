@@ -9,14 +9,29 @@ public class UserOrder {
 	private String orderPrice;
 	private String orderDesc;
 	private String comments;
-	//0:δ���� 1���Ѹ������������  2�����������
+	//0：表示未付款 1：表示付款但是进行中 2：表示订单已完成
 	private Integer enableStatus;
+	//0:表示上门自取，1：表示送货上门
+	private Integer orderType;
 	private Date createTime;
 	private Date lastEditTime;
 	
 	private Product product;
 	private User user;
+	private UserAddress address;
 	
+	public Integer getOrderType() {
+		return orderType;
+	}
+	public void setOrderType(Integer orderType) {
+		this.orderType = orderType;
+	}
+	public UserAddress getAddress() {
+		return address;
+	}
+	public void setAddress(UserAddress address) {
+		this.address = address;
+	}
 	public Long getOrderId() {
 		return orderId;
 	}

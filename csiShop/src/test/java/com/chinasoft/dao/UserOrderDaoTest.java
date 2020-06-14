@@ -20,7 +20,7 @@ public class UserOrderDaoTest extends BaseTest{
 		List<UserOrder> orderList = orderDao.queryOrderList();
 		assertEquals(true,orderList.size()!=0);
 		for(UserOrder order:orderList) {
-			System.out.println(order.getUser().getName()+"的关于"+order.getProduct().getProductName()+"的订单");
+			System.out.println(order.getUser().getName()+"的关于"+order.getProduct().getProductName()+"的订单"+" 地址："+order.getAddress().getContent());
 		}
 		
 	}

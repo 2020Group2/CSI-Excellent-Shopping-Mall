@@ -10,6 +10,7 @@
 		<result column="order_price" property="orderPrice" />
 		<result column="order_desc" property="orderDesc" />
 		<result column="comments" property="comments" />
+		<result column="order_type" property="orderType" />
 		<result column="create_time" property="createTime" />
 		<result column="last_edit_time" property="lastEditTime" />
 		<association property="user" column="user_id" javaType="com.chinasoft.entity.User">
@@ -22,21 +23,29 @@
 			<result column="product_name" property="productName" />
 			<result column="product_img" property="productImg" />
 		</association>
+		<association property="address" column="address_id" javaType="com.chinasoft.entity.UserAddress">
+			<id column="addr_id" property="addrId" />
+			<result column="content" property="content" />
+		</association>
 	</resultMap>
 	<select id="queryOrderList" resultMap="orderMap">
 		SELECT 
 		o.order_id,o.product_number,o.order_price,o.order_desc,o.comments,o.create_time,o.last_edit_time,
 		u.user_id,u.name,
-		p.product_id,p.product_name,p.product_img
-
+		p.product_id,p.product_name,p.product_img,
+		ud.addr_id,ud.content
 		FROM 
 		user_order o,
 		product p,
+		user_address ud,
 		user u
+
 		WHERE
 		o.user_id = u.user_id
 		AND 
 		o.product_id = p.product_id
+		AND
+		o.address_id = ud.addr_id
 		
 		
 	</select>
