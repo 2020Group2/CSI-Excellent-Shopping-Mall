@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.chinasoft.entity.ProductCollection;
-import com.chinasoft.service.ProductCollectionService;
+import com.chinasoft.entity.Order;
+import com.chinasoft.service.OrderService;
 
 @Controller
-@RequestMapping("/saproductcollection")
-public class ProductCollectionController {
+@RequestMapping("/saorder")
+public class OrderController {
 	@Autowired
-	private ProductCollectionService productCollectionService;
+	private OrderService orderService;
 	
-	@RequestMapping(value = "/listProductCollection",method = RequestMethod.GET)
+	@RequestMapping(value = "/listOrder",method = RequestMethod.GET)
 	@ResponseBody
-	private Map<String,Object> listProductCollection(){
+	private Map<String,Object> listOrder(){
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		List<ProductCollection> list = new ArrayList<ProductCollection>();
-		list = productCollectionService.getProductCollectionList();
+		List<Order> list = new ArrayList<Order>();
+		list = orderService.getOrderList();
 		modelMap.put("data", list);
 		return modelMap;
 	}

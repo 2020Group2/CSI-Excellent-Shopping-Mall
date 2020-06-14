@@ -2,6 +2,15 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- author:苟光耀  订单查询-->
 <mapper namespace="com.chinasoft.dao.OrderDao">
-	
+	<select id="queryOrder" resultType="com.chinasoft.entity.Order" resultMap="queryOrder">
+		select * from user_order
+	</select>
+	<resultMap type="Order" id="queryOrder">
+
+		<association property="user" javaType="user">
+
+		</association>
+	</resultMap>
 </mapper>

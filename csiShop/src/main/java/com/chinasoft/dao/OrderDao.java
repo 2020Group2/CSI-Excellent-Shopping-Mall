@@ -1,5 +1,9 @@
 package com.chinasoft.dao;
 
-public interface OrderDao {
+import java.util.List;
 
+import com.chinasoft.entity.Order;
+
+public interface OrderDao {
+	List<Order> queryOrder();
 }

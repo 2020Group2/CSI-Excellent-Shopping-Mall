@@ -4,6 +4,11 @@ import java.util.Date;
 
 public class ProductCollection {
 
+	@Override
+	public String toString() {
+		return "ProductCollection [collectionId=" + collectionId + ", product=" + product + ", user=" + user
+				+ ", createTime=" + createTime + ", lastEditTime=" + lastEditTime + "]";
+	}
 	private Long collectionId;
 	private Product product;
 	private User user;
@@ -37,6 +42,24 @@ public class ProductCollection {
 		return lastEditTime;
 	}
 	public void setLastEditTime(Date lastEditTime) {
+		this.lastEditTime = lastEditTime;
+	}
+	public ProductCollection(Long collectionId, Product product, User user, Date createTime, Date lastEditTime) {
+		super();
+		this.collectionId = collectionId;
+		this.product = product;
+		this.user = user;
+		this.createTime = createTime;
+		this.lastEditTime = lastEditTime;
+	}
+	public ProductCollection() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ProductCollection(Long collectionId, Date createTime, Date lastEditTime) {
+		super();
+		this.collectionId = collectionId;
+		this.createTime = createTime;
 		this.lastEditTime = lastEditTime;
 	}
 	

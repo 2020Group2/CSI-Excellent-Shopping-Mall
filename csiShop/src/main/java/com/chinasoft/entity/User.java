@@ -96,6 +96,53 @@ public class User {
 	public void setLastEditTime(Date lastEditTime) {
 		this.lastEditTime = lastEditTime;
 	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public User(Long userId) {
+		super();
+		this.userId = userId;
+	}
+	public User(Long userId, String name, String profileImg, String phone, String email, String gender,
+			Integer enableStatus, Date createTime, Date lastEditTime, List<UserAddress> userAddressList,
+			List<Order> orderList, List<ProductCollection> productCollectionList, List<ShopCar> shopCarList) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.profileImg = profileImg;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.enableStatus = enableStatus;
+		this.createTime = createTime;
+		this.lastEditTime = lastEditTime;
+		this.userAddressList = userAddressList;
+		this.orderList = orderList;
+		this.productCollectionList = productCollectionList;
+		this.shopCarList = shopCarList;
+	}
+	public User(Long userId, String name, String profileImg, String phone, String email, String gender,
+			Integer enableStatus, Date createTime, Date lastEditTime) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.profileImg = profileImg;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.enableStatus = enableStatus;
+		this.createTime = createTime;
+		this.lastEditTime = lastEditTime;
+	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", profileImg=" + profileImg + ", phone=" + phone
+				+ ", email=" + email + ", gender=" + gender + ", enableStatus=" + enableStatus + ", createTime="
+				+ createTime + ", lastEditTime=" + lastEditTime + ", userAddressList=" + userAddressList
+				+ ", orderList=" + orderList + ", productCollectionList=" + productCollectionList + ", shopCarList="
+				+ shopCarList + "]";
+	}
 	
 	
 	
