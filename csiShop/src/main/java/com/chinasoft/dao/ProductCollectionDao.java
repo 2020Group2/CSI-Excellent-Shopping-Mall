@@ -1,5 +1,10 @@
 package com.chinasoft.dao;
 
-public interface ProductCollectionDao {
+import java.util.List;
 
+import com.chinasoft.entity.ProductCollection;
+
+
+public interface ProductCollectionDao {
+	List<ProductCollection> queryProductCollection();
 }
