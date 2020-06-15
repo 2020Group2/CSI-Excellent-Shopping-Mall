@@ -65,26 +65,25 @@ public class IndexManagementController {
 	public Map<String,Object> getProductCategoryById(HttpServletRequest request){
 		Map<String,Object> modelMap = new HashMap<String,Object>();
 		long parentId = HttpServletRequestUtil.getLong(request, "parentId");
-		if(parentId>-1) {
-			try {
-				ProductCategory parentCategory = new ProductCategory();
-				parentCategory.setProductCategoryId(parentId);
-				ProductCategory productCategoryCondition = new ProductCategory();
-				productCategoryCondition.setParent(parentCategory);
-				List<ProductCategory> productCategoryList = productCategoryService.getProductCategoryList(productCategoryCondition);
-				if(productCategoryList.size()>0) {
-					modelMap.put("productCategoryList", productCategoryList);
-					modelMap.put("isLowestLevel", false);
-					modelMap.put("success", true);
-				}else {
-					modelMap.put("Msg", "获取的类别为最低类别，跳转到商品列表页面");
-					modelMap.put("success", true);
-					modelMap.put("isLowestLevel", true);
-				}
-			}catch (Exception e) {
-				modelMap.put("success", false);
-				modelMap.put("errMsg", e.toString());
+		try {
+			ProductCategory parentCategory = new ProductCategory();
+			parentCategory.setProductCategoryId(parentId);
+			ProductCategory productCategoryCondition = new ProductCategory();
+			productCategoryCondition.setParent(parentCategory);
+			List<ProductCategory> productCategoryList = productCategoryService
+					.getProductCategoryList(productCategoryCondition);
+			if (productCategoryList.size() > 0) {
+				modelMap.put("productCategoryList", productCategoryList);
+				modelMap.put("isLowestLevel", false);
+				modelMap.put("success", true);
+			} else {
+				modelMap.put("Msg", "获取的类别为最低类别，跳转到商品列表页面");
+				modelMap.put("success", true);
+				modelMap.put("isLowestLevel", true);
 			}
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.toString());
 		}
 		return modelMap;
 	}

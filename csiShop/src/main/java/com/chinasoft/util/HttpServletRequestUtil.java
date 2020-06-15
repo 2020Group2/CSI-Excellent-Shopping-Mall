@@ -2,7 +2,7 @@ package com.chinasoft.util;
 
 import javax.servlet.http.HttpServletRequest;
 
-//将从前端获取的数据转换位适合的Java类型
+//将从前端获取的数据转换为适合的Java类型
 //Author:Zenghuqiang
 public class HttpServletRequestUtil {
 
