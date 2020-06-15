@@ -17,7 +17,7 @@ public class UserAddressServiceTest extends BaseTest{
 	@Test
 	public void getUserAddressListTest() {
 		List<UserAddress> list = userAddressService.getUserAddressList();
-		assertEquals("³É¶¼",list.get(0).getContent());
+		assertEquals("2",list.get(0).getContent());
 		
 	}
 	

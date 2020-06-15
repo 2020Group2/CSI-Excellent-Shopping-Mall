@@ -5,7 +5,7 @@ import java.util.Date;
 public class UserOrder {
 	
 	private Long orderId;
-	private int productNumber;
+	private int productNumber;//商品数量
 	private String orderPrice;
 	private String orderDesc;
 	private String comments;

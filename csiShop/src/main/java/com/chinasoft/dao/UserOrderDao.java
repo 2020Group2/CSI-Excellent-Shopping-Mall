@@ -11,4 +11,7 @@ public interface UserOrderDao {
 	 * @return 后台查询所有的订单信息
 	 */
 	List<UserOrder> queryOrderList();
+	
+	void updatestatus(UserOrder userOrder);
+	void updateorderType(UserOrder userOrder);
 }

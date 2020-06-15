@@ -17,7 +17,7 @@ public class ProductCategoryDaoTest extends BaseTest{
 	@Test
 	public void queryParentCategoryTest() {
 		List<ProductCategory> list = productCategoryDao.queryProductCategory(null);
-		assertEquals(4,list.size());
+		assertEquals(1,list.size());
 		for(ProductCategory p:list) {
 			System.out.println(p.getProductCategoryName());
 		}
@@ -30,7 +30,7 @@ public class ProductCategoryDaoTest extends BaseTest{
 		ProductCategory childCategoryCondition = new ProductCategory();
 		childCategoryCondition.setParent(parentCategoryCondition);
 		List<ProductCategory> list = productCategoryDao.queryProductCategory(childCategoryCondition);
-		assertEquals(3, list.size());
+		assertEquals(1, list.size());
 		for(ProductCategory p:list) {
 			System.out.println(p.getProductCategoryName());
 		}
