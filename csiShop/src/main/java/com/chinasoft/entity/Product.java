@@ -16,14 +16,16 @@ public class Product {
 	private Integer enableStatus;
 	private ProductCategory productCategory;
 	private List<ProductImg> productImgList;
+	
+	private Date createTime;
+	private Date lastEditTime;
+	
 	public List<ProductImg> getProductImgList() {
 		return productImgList;
 	}
 	public void setProductImgList(List<ProductImg> productImgList) {
 		this.productImgList = productImgList;
 	}
-	private Date createTime;
-	private Date lastEditTime;
 	public Long getProductId() {
 		return productId;
 	}

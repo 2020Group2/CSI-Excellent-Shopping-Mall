@@ -2,36 +2,21 @@ package com.chinasoft.entity;
 
 import java.util.Date;
 
-public class UserOrder {
+public class Order {
 	
 	private Long orderId;
 	private int productNumber;
 	private String orderPrice;
 	private String orderDesc;
 	private String comments;
-	//0ï¼šè¡¨ç¤ºæœªä»˜æ¬¾ 1ï¼šè¡¨ç¤ºä»˜æ¬¾ä½†æ˜¯è¿›è¡Œä¸­ 2ï¼šè¡¨ç¤ºè®¢å•å·²å®Œæˆ
+	//0:Î´¸¶¿î 1£ºÒÑ¸¶¿î£¬¶©µ¥½øĞĞÖĞ  2£º¶©µ¥ÒÑÍê³É
 	private Integer enableStatus;
-	//0:è¡¨ç¤ºä¸Šé—¨è‡ªå–ï¼Œ1ï¼šè¡¨ç¤ºé€è´§ä¸Šé—¨
-	private Integer orderType;
 	private Date createTime;
 	private Date lastEditTime;
 	
 	private Product product;
 	private User user;
-	private UserAddress address;
 	
-	public Integer getOrderType() {
-		return orderType;
-	}
-	public void setOrderType(Integer orderType) {
-		this.orderType = orderType;
-	}
-	public UserAddress getAddress() {
-		return address;
-	}
-	public void setAddress(UserAddress address) {
-		this.address = address;
-	}
 	public Long getOrderId() {
 		return orderId;
 	}

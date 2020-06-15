@@ -1,15 +1,64 @@
 package com.chinasoft.dao;
 import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Repository;
 
 import com.chinasoft.entity.Product;
-public interface ProductDao {
 
+/**
+ * ÉÌÆ·Dao²ãĞÅÏ¢
+ * @author THQ
+ *
+ */
+@Repository
+public interface ProductDao {
+	/**
+	 * 1Ìí¼ÓÉÌÆ·
+	 * @param productCategory
+	 * @return
+	 */
+	public int add(Product product);
 	
 	/**
-	 * æ ¹æ®ä¼ å…¥productCategoryIdæ¥ç­›é€‰å•†å“
-	 * @param productCategoryId
+	 * 2±à¼­ÉÌÆ·
+	 * @param productCategory
 	 * @return
-	 * Authorï¼šZenghuqiang
 	 */
-	List<Product> queryProductListByCategory(Long productCategoryId);
+	public int edit(Product product);
+	
+	/**
+	 * 3É¾³ıÉÌÆ·
+	 * @param id
+	 * @return
+	 */
+	public int delete(Long id);
+	
+	/**
+	 * 4¶àÌõ¼şËÑË÷´Ê²éÑ¯ÉÌÆ·
+	 * @param queMap
+	 * @return
+	 */
+	public List<Product> findList(Map<String, Object> queryMap);
+	
+	/**
+	 * 5»ñÈ¡·ûºÏÌõ¼şµÄ×Ü¼ÇÂ¼Êı
+	 * @param queryMap
+	 * @return
+	 */
+	public Integer getTotal(Map<String, Object> queryMap);
+	
+	/**
+	 * 6¸ù¾İid²éÑ¯ÉÌÆ·
+	 * @param id
+	 * @return
+	 */
+	public Product findById(Long id);
+	
+	/**
+	 * 7¸üĞÂÍ³¼ÆĞÅÏ¢
+	 * @param product
+	 * @return
+	 */
+	public int updateNum(Product product);
 }
