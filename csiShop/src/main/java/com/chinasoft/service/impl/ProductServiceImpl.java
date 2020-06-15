@@ -18,5 +18,13 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> getProductList(Product productCondition) {
 		return productDao.queryProductList(productCondition);
 	}
+	@Override
+	public List<Product> getHotProductList(int size) {
+		return productDao.hotSaleProductList(size);
+	}
+	@Override
+	public List<Product> getNewestProductList(int size) {
+		return productDao.newestProductList(size);
+	}
 
 }

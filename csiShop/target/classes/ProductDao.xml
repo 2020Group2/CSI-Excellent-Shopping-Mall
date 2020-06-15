@@ -20,9 +20,36 @@
 			<if test="productCondition!=null and productCondition.productId !=null">
 				AND product_id = #{productCondition.productId}
 			</if>
+			<if test="productCondition!=null and productCondition.productName !=null">
+				AND product_Name like '%${productCondition.productName}%'
+			</if>
+
 		</where>
 		AND enable_status = 1
 		ORDER BY
 		priority DESC
 	</select>
+	<select id="hotSaleProductList" resultType="product">
+		SELECT
+		product_id, product_name, product_desc,product_img,normal_price, promotion_price,priority,enable_status,product_category_id,create_time,last_edit_time
+		FROM product
+		WHERE
+		enable_status = 1
+		ORDER BY
+		sales DESC
+		LIMIT 0,#{size}	
+	</select>
+	
+	<select id="newestProductList" resultType="product">
+		SELECT 
+		product_id, product_name, product_desc,product_img,normal_price, promotion_price,priority,enable_status,product_category_id,create_time,last_edit_time
+		FROM product
+		WHERE
+		enable_status = 1
+		ORDER BY
+		create_time DESC
+		LIMIT 0,#{size}	
+		
+	</select>
+	
 </mapper>

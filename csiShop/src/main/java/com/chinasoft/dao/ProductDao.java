@@ -15,6 +15,19 @@ public interface ProductDao {
 	 */
 	List<Product> queryProductList(@Param("productCondition")Product productCondition);
 	
+	/**
+	 * 获取热销商品
+	 * @return
+	 * Author：Zenghuqiang
+	 */
+	List<Product> hotSaleProductList(int size);
+	
+	/**
+	 * 获取最新商品
+	 * @return
+	 * Author：Zenghuqiang
+	 */
+	List<Product> newestProductList(int size);
 	
 
 }

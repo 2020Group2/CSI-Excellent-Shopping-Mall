@@ -30,6 +30,7 @@ public class ProductManageController {
 	 * 通过前端传入的productCategoryId返回与之相关的productList
 	 * @param request
 	 * @return
+	 * Author:Zenghuqiang
 	 */
 	@RequestMapping(value = "/productListByCategory", method = RequestMethod.GET)
 	@ResponseBody
@@ -76,6 +77,93 @@ public class ProductManageController {
 			if (productList.size() > 0) {
 				modelMap.put("product", productList.get(0));
 				modelMap.put("productImgList", productImgList);
+				modelMap.put("success", true);
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "没有找到相关的商品！");
+			}
+
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.toString());
+		}
+		return modelMap;
+	}
+	
+	/**
+	 * 前端搜索框功能
+	 * 根据前端传入的productName获取相关
+	 * @param request
+	 * @return
+	 * Author:Zenghuqiang
+	 */
+	@RequestMapping(value = "/getproductbysearch", method = RequestMethod.GET)
+	@ResponseBody
+	public Map<String,Object> getproductbysearch(HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<>();
+		String productName = HttpServletRequestUtil.getString(request, "productName");
+		try {
+			Product productCondition = new Product();
+			productCondition.setProductName(productName);
+			List<Product> productList = productService.getProductList(productCondition);
+			if (productList.size() > 0) {
+				modelMap.put("productList", productList);
+				modelMap.put("success", true);
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "没有找到相关的商品！");
+			}
+
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.toString());
+		}
+		return modelMap;
+	}
+	
+	/**
+	 * 获取热销商品
+	 * @param request
+	 * @return
+	 * Author:Zenghuqiang
+	 */
+	@RequestMapping(value = "/gethotproduct", method = RequestMethod.GET)
+	@ResponseBody
+	public Map<String,Object> gethotproduct(HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<>();
+		int hotSize = HttpServletRequestUtil.getInt(request, "hotProductSize");
+		try {
+			List<Product> productList = productService.getHotProductList(hotSize);
+			if (productList.size() > 0) {
+				modelMap.put("productList", productList);
+				modelMap.put("success", true);
+			} else {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "没有找到相关的商品！");
+			}
+
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.toString());
+		}
+		return modelMap;
+	}
+	
+	/**
+	 * 获取最新商品
+	 * @param request
+	 * @return
+	 * Author:Zenghuqiang
+	 */
+	@RequestMapping(value = "/getnewestproduct", method = RequestMethod.GET)
+	@ResponseBody
+	public Map<String,Object> getnewestproduct(HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<>();
+		int newSize = HttpServletRequestUtil.getInt(request, "newProductSize");
+		try {
+			List<Product> productList = productService.getHotProductList(newSize);
+			if (productList.size() > 0) {
+				modelMap.put("productList", productList);
 				modelMap.put("success", true);
 			} else {
 				modelMap.put("success", false);
