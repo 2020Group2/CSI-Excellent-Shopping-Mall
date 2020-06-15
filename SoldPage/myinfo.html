@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <title></title>
+
+    <!--=== Favicon ===-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Google fonts include -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900%7CYesteryear"-->
+        <!--rel="stylesheet">-->
+
+    <!-- All Vendor & plugins CSS include -->
+    <link href="assets/css/vendor.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link href="assets/css/style_myinfo.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/amazeui.cropper.css">
+    <link rel="stylesheet" href="css/custom_up_img.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+
+
+    <script src="assets/js/getuserid.js"></script>
+
+    <script src="assets/js//getInfo.js"></script>
+
+    <script src="assets/js//getLike.js"></script>
+
+    <script src="assets/js//removelike.js"></script>
+
+    <script src="assets/js//jumptogoodsdetail.js"></script>
+
+    <script src="assets/js//updateInfo.js"></script>
+
+    <script src="assets/js//getselling.js"></script>
+
+    <script src="assets/js//getsold.js"></script>
+
+    <script src="assets/js//getbought.js"></script>
+
+    <script src="assets/js/clearallmyinfo.js"></script>
+
+    <script src="assets/js/toindex.js"></script>
+
+    <style type="text/css">
+        .up-img-cover {
+            width: 100px;
+            height: 100px;
+        }
+
+        .up-img-cover img {
+            width: 100%;
+        }
+
+        .up-img-txt label {
+            font-weight: 100;
+            margin-top: 50px;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+<script src="/oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+    <header class="header-area">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+            <!-- header top start -->
+            <div class="header-top bdr-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="welcome-message">
+                                <p>欢迎来到二手商品交易系统！</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <div class="header-top-settings">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top end -->
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-3">
+
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-6 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+                        <div class="col-lg-3">
+                            <div class="header-configure-wrapper">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            
+                                        </li>
+                                        <li class="user-hover">
+                                            <a href="#">
+                                                <i class="lnr lnr-user"></i>
+                                            </a>
+                                            <ul class="dropdown-list">
+                                                <li><a href="signin.html">登录</a></li>
+                                                <li><a href="signup.html">注册</a></li>
+                                                <li><a href="myinfo.html">个人主页</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+
+    </header>
+    <!-- end Header Area -->
+
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="btn-close-off-canvas">
+                <i class="lnr lnr-cross"></i>
+            </div>
+
+            <div class="off-canvas-inner">
+                <!-- search box start -->
+                <div class="search-box-offcanvas">
+                    <form>
+                        <input type="text" placeholder="Search Here...">
+                        <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                    </form>
+                </div>
+                <!-- search box end -->
+
+
+
+
+            </div>
+        </div>
+    </aside>
+    <!-- off-canvas menu end -->
+
+
+
+    <!-- main wrapper start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div class="breadcrumb-area common-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <h1>个人主页</h1>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a onclick="myinfotoindex()"><i class="fa fa-home"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+
+        <!-- page main wrapper start -->
+        <div class="shop-main-wrapper section-space pb-0">
+            <div class="container">
+                <div class="row">
+                    <!-- sidebar area start -->
+                    <div class="col-lg-3 order-2 order-lg-1">
+                        <aside class="sidebar-wrapper">
+                            <!-- single sidebar start -->
+                            <div class="sidebar-single">
+                                <h3 class="sidebar-title">个人信息</h3>
+                                <div class="sidebar-body">
+
+
+                                    <div id="setHead">
+                                        <div class="up-img-cover" id="up-img-touch">
+                                            <img class="am-circle" alt="点击图片上传" src="assets/images/prehead.png"
+                                                data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+                                        </div>
+
+                                        <!--图片上传框-->
+                                        <div class="am-modal am-modal-no-btn up-modal-frame" tabindex="-1"
+                                            id="up-modal-frame">
+                                            <div class="am-modal-dialog up-frame-parent up-frame-radius">
+                                                <div class="am-modal-hd up-frame-header">
+                                                    <label>修改头像</label>
+                                                    <a href="javascript: void(0)" class="am-close am-close-spin"
+                                                        data-am-modal-close="">×</a>
+                                                </div>
+                                                <div class="am-modal-bd  up-frame-body">
+                                                    <div class="am-g am-fl">
+
+                                                        <div class="am-form-group am-form-file">
+                                                            <div class="am-fl">
+                                                                <button type="button"
+                                                                    class="am-btn am-btn-default am-btn-sm">
+                                                                    <i class="am-icon-cloud-upload"></i>
+                                                                    选择要上传的文件</button>
+                                                            </div>
+                                                            <input type="file" class="up-img-file">
+                                                        </div>
+                                                    </div>
+                                                    <div class="am-g am-fl">
+                                                        <div class="up-pre-before up-frame-radius">
+                                                            <img alt="" src="" class="up-img-show" id="up-img-show">
+                                                        </div>
+                                                        <div class="up-pre-after up-frame-radius">
+                                                        </div>
+                                                    </div>
+                                                    <div class="am-g am-fl">
+                                                        <div class="up-control-btns">
+                                                            <span class="am-icon-rotate-left" id="up-btn-left"></span>
+                                                            <span class="am-icon-rotate-right" id="up-btn-right"></span>
+                                                            <span class="am-icon-check up-btn-ok"
+                                                                url="/admin/user/upload.action"
+                                                                parameter="{width:'100',height:'100'}">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--加载框-->
+                                        <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1"
+                                            id="up-modal-loading">
+                                            <div class="am-modal-dialog">
+                                                <div class="am-modal-hd">正在上传...</div>
+                                                <div class="am-modal-bd">
+                                                    <span class="am-icon-spinner am-icon-spin"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--警告框-->
+                                        <div class="am-modal am-modal-alert" tabindex="-1" id="up-modal-alert">
+                                            <div class="am-modal-dialog">
+                                                <div class="am-modal-hd">信息</div>
+                                                <div class="am-modal-bd" id="alert_content">
+                                                    成功了
+                                                </div>
+                                                <div class="am-modal-footer">
+                                                    <span class="am-modal-btn">确定</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="am-popover am-popover-bottom" id="am-popover-me0jb"
+                                            style="top: 110px; left: 9px;">
+                                            <div class="am-popover-inner">点击上传</div>
+                                            <div class="am-popover-caret"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="shop-categories">
+                                        <li id="li1">
+                                            <p onclick="getInfo()">我的信息</p> <span></span>
+                                        </li>
+                                        <li id="li2">
+                                            <p onclick="getselling()">未卖出的</p> <span></span>
+                                        </li>
+                                        <li id="li3">
+                                            <p onclick="getsold()">我卖出的</p> <span></span>
+                                        </li>
+                                        <li id="li4">
+                                            <p onclick="getbought()">我买过的</p> <span></span>
+                                        </li>
+                                        <li id="li6">
+                                            <p onclick="getLike()">收藏列表</p> <span></span>
+                                        </li> 
+                                        <li id="li5" onclick="updateshow()">
+                                            <p>修改信息</p> <span></span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- single sidebar end -->
+
+
+
+
+
+
+
+                        </aside>
+                    </div>
+                    <!-- sidebar area end -->
+
+                    <!-- shop main wrapper start -->
+                    <div class="col-lg-9 order-1 order-lg-2">
+
+                        <div id="allinall">
+                            <div class="myinfoDetail" id="myinfoDetail">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <div class="hengxiang" >昵称：</div>
+                                            <div class="hengxiang" id="username"></div>
+                                        </li>
+                                        <li>
+                                            <div class="hengxiang">账号：</div>
+                                            <div class="hengxiang" id="userid"></div>
+                                        </li>
+                                        <li>
+                                            <div class="hengxiang">密码：</div>
+                                            <div class="hengxiang" id="password"></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址1</li>
+                                                <li>
+                                                    <div class="hengxiang" >省：</div>
+                                                    <div class="hengxiang"  >四川</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >市：</div>
+                                                    <div class="hengxiang" >成都</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >详细地址：</div>
+                                                    <div class="hengxiang" >江安校区</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >联系方式：</div>
+                                                    <div class="hengxiang">110</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址2</li>
+                                                <li>
+                                                    <div class="hengxiang" >省：</div>
+                                                    <div class="hengxiang" >四川</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >市：</div>
+                                                    <div class="hengxiang" >成都</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >详细地址：</div>
+                                                    <div class="hengxiang" >江安校区</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >联系方式：</div>
+                                                    <div class="hengxiang" >110</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址3</li>
+                                                <li>
+                                                    <div class="hengxiang" >省：</div>
+                                                    <div class="hengxiang">四川</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >市：</div>
+                                                    <div class="hengxiang" >成都</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >详细地址：</div>
+                                                    <div class="hengxiang" >江安校区</div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang" >联系方式：</div>
+                                                    <div class="hengxiang" >110</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="shop-product-wrapper">
+                                <!-- shop product top wrap start -->
+
+                                <!-- shop product top wrap start -->
+
+                                <!-- product item list wrapper start -->
+                                <!--<div class="shop-product-wrap grid-view row mbn-40">-->
+
+
+
+
+
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item1">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail1()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail1()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid1" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item2">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail2()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail2()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid2" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item3">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail3()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail3()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid3" >123</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item4">
+                                        <figure class="product-thumb">
+                                            <a>
+                                                <img onclick="seesellingdetail4()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail4()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid4" >123</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item5">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail5()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail5()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid5" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item6">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail6()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail6()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid6" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item7">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail7()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail7()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid7" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-item" id="product-list-item8">
+                                        <figure class="product-thumb">
+                                            <a >
+                                                <img onclick="seesellingdetail8()" class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seesellingdetail8()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="sellinggoodsid8" ></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <!--</div>-->
+                                <!-- product item list wrapper end -->
+
+
+                            </div>
+                            <!-- product item list wrapper end -->
+
+                            <div class="hadsold">
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold1">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold2">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold3">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+         
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold4">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+           
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold5">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                             
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold6">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                               
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold7">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                         
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsold" id="product-list-itemsold8">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                    
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                                <!-- product single item start -->
+                            </div>
+
+                            <div class="hadbuy">
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell1">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                 
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell2">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                     
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell3">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                         
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell4">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                    
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell5">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                      
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell6">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                      
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell7">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                    
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemsell" id="product-list-itemsell8">
+                                        <figure class="product-thumb">
+
+                                            <img class="pri-img" src="assets/img/product/product-1.jpg" alt="product">
+
+
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="productname">Flowers daisy pink stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span class="price-regular">$50.00</span>
+
+                                            </div>
+                                 
+
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+
+                            </div>
+
+                            <div class="mylike">
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike1">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail1()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail1()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid1" >123</p>
+                                            </div>
+                                        </div>
+
+                                        <button onclick="removelike1()" class="removelike">取消收藏</button>
+                                    </div>
+                                    
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike2">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail2()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a  class="goodsname" onclick="seedetail2()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid2" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike2()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike3">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail3()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail3()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid3" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike3()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike4">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail4()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail4()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid4" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike4()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike5">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail5()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail5()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid5" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike5()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike6">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail6()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail6()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid6" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike6()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike7">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail7()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail7()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid7" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike7()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+
+                                <!-- product single item start -->
+                                <div class="col-md-4 col-sm-6">
+
+
+                                    <!-- product list item end -->
+                                    <div class="product-list-itemlike" id="product-list-itemlike8">
+                                        <figure class="product-thumb">
+                                            <a onclick="seedetail8()">
+                                                <img class="pri-img" src="assets/img/product/product-1.jpg"
+                                                    alt="product">
+
+                                            </a>
+                                            <div class="product-badge">
+
+                                            </div>
+                                        </figure>
+                                        <div class="product-content-list">
+                                            <h5 class="product-name"><a class="goodsname" onclick="seedetail8()">Flowers daisy pink
+                                                    stick</a></h5>
+                                            <div class="price-box">
+                                                <span>￥</span><span  class="price-regular">$50.00</span>
+
+                                            </div>
+                                            <p class="goodsdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                                perspiciatis
+                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam corporis
+                                                ullam
+                                                rem, accusantium adipisci officia eaque.
+                                            </p>
+                                            <div class="button-group-list">
+                                                <p style="display:none" id="goodsid8" >123</p>
+                                            </div>
+                                        </div>
+                                        <button onclick="removelike8()" class="removelike">取消收藏</button>
+                                    </div>
+                                    <!-- product list item end -->
+                                </div>
+                            </div>
+
+                            <div class="myinfoUpdate" id="myinfoUpdate" >
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <div class="hengxiang">昵称：</div>
+                                            <div class="hengxiang"><input id="updatename" type="text" size="10"/></div>
+                                        </li>
+                                        <li>
+                                            <div class="hengxiang">账号：</div>
+                                            <div class="hengxiang">12345678</div>
+                                        </li>
+                                        <li>
+                                            <div class="hengxiang">密码：</div>
+                                            <div class="hengxiang"><input id="updatepassword" type="text" size="10"/></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址1</li>
+                                                <li>
+                                                    <div class="hengxiang">省：</div>
+                                                    <div class="hengxiang"><input class="updateprovince" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">市：</div>
+                                                    <div class="hengxiang"><input class="updatecity" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">详细地址：</div>
+                                                    <div class="hengxiang"><input class="updatedetail" type="text" size="30"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">联系方式：</div>
+                                                    <div class="hengxiang"><input class="updatephone" type="text" size="15"/></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址2</li>
+                                                <li>
+                                                    <div class="hengxiang">省：</div>
+                                                    <div class="hengxiang"><input class="updateprovince" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">市：</div>
+                                                    <div class="hengxiang"><input class="updatecity" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">详细地址：</div>
+                                                    <div class="hengxiang"><input class="updatedetail" type="text" size="30"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">联系方式：</div>
+                                                    <div class="hengxiang"><input class="updatephone" type="text" size="15"/></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li style="color: blueviolet">地址3</li>
+                                                <li>
+                                                    <div class="hengxiang">省：</div>
+                                                    <div class="hengxiang"><input class="updateprovince" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">市：</div>
+                                                    <div class="hengxiang"><input class="updatecity" type="text" size="5"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">详细地址：</div>
+                                                    <div class="hengxiang"><input class="updatedetail" type="text" size="30"/></div>
+                                                </li>
+                                                <li>
+                                                    <div class="hengxiang">联系方式：</div>
+                                                    <div class="hengxiang"><input class="updatephone" type="text" size="15"/></div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <button onclick="updateInfo()" id="updateInfoche">更新资料</button>
+                                </nav>
+                            </div>
+                        </div>
+
+
+                        <!-- start pagination area -->
+                        <div class="paginatoin-area text-center">
+                            <ul class="pagination-box" id="pagination-box">
+                                <li><a class="previous" href="#"><i class="lnr lnr-chevron-left"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a class="next" href="#"><i class="lnr lnr-chevron-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- end pagination area -->
+                    </div>
+                </div>
+                <!-- shop main wrapper end -->
+            </div>
+        </div>
+        </div>
+        <!-- page main wrapper end -->
+    </main>
+    <!-- main wrapper end -->
+
+    <!-- Start Footer Area Wrapper -->
+    <footer class="footer-wrapper">
+
+
+
+    </footer>
+    <!-- End Footer Area Wrapper -->
+
+    <!-- Quick view modal start -->
+    <div class="modal" id="quick_view">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- product details inner end -->
+                    <div class="product-details-inner">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="product-large-slider">
+                                    <div class="pro-large-img">
+                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-large-img">
+                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-large-img">
+                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-large-img">
+                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                    </div>
+                                </div>
+                                <div class="pro-nav slick-row-10 slick-arrow-style">
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                    </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="product-details-des quick-details">
+                                    <h3 class="product-name">Orchid flower white stick</h3>
+                                    <div class="ratings d-flex">
+                                        <span><i class="lnr lnr-star"></i></span>
+                                        <span><i class="lnr lnr-star"></i></span>
+                                        <span><i class="lnr lnr-star"></i></span>
+                                        <span><i class="lnr lnr-star"></i></span>
+                                        <span><i class="lnr lnr-star"></i></span>
+                                        <div class="pro-review">
+                                            <span>1 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price-regular">$70.00</span>
+                                        <span class="price-old"><del>$90.00</del></span>
+                                    </div>
+                                    <h5 class="offer-text"><strong>Hurry up</strong>! offer ends in:</h5>
+                                    <div class="product-countdown" data-countdown="2019/08/25"></div>
+                                    <div class="availability">
+                                        <i class="fa fa-check-circle"></i>
+                                        <span>200 in stock</span>
+                                    </div>
+                                    <p class="pro-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                        diam nonumy
+                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                    <div class="quantity-cart-box d-flex align-items-center">
+                                        <h5>qty:</h5>
+                                        <div class="quantity">
+                                            <div class="pro-qty"><input type="text" value="1"></div>
+                                        </div>
+                                        <div class="action_link">
+                                            <a class="btn btn-cart2" href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="useful-links">
+                                        <a href="#" data-toggle="tooltip" title="Compare"><i
+                                                class="lnr lnr-sync"></i>compare</a>
+                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i
+                                                class="lnr lnr-heart"></i>wishlist</a>
+                                    </div>
+                                    <div class="like-icon">
+                                        <a class="facebook" href="#"><i class="fa fa-facebook"></i>like</a>
+                                        <a class="twitter" href="#"><i class="fa fa-twitter"></i>tweet</a>
+                                        <a class="pinterest" href="#"><i class="fa fa-pinterest"></i>save</a>
+                                        <a class="google" href="#"><i class="fa fa-google-plus"></i>share</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- product details inner end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick view modal end -->
+
+    <!-- offcanvas search form start -->
+    <div class="offcanvas-search-wrapper">
+        <div class="offcanvas-search-inner">
+            <div class="offcanvas-close">
+                <i class="lnr lnr-cross"></i>
+            </div>
+            <div class="container">
+                <div class="offcanvas-search-box">
+                    <form class="d-flex bdr-bottom w-100">
+                        <input type="text" placeholder="请输入搜索的商品">
+                        <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas search form end -->
+
+    <!-- offcanvas mini cart start -->
+    <div class="offcanvas-minicart-wrapper">
+        <div class="minicart-inner">
+            <div class="offcanvas-overlay"></div>
+            <div class="minicart-inner-content">
+                <div class="minicart-close">
+                    <i class="lnr lnr-cross"></i>
+                </div>
+                <div class="minicart-content-box">
+                    <div class="minicart-item-wrapper">
+                        <ul>
+                            <li class="minicart-item">
+                                <div class="minicart-thumb">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/cart/cart-1.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="minicart-content">
+                                    <h3 class="product-name">
+                                        <a href="product-details.html">Flowers bouquet pink for all flower lovers</a>
+                                    </h3>
+                                    <p>
+                                        <span class="cart-quantity">1 <strong>&times;</strong></span>
+                                        <span class="cart-price">$100.00</span>
+                                    </p>
+                                </div>
+                                <button class="minicart-remove"><i class="lnr lnr-cross"></i></button>
+                            </li>
+                            <li class="minicart-item">
+                                <div class="minicart-thumb">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/cart/cart-2.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="minicart-content">
+                                    <h3 class="product-name">
+                                        <a href="product-details.html">Jasmine flowers white for all flower lovers</a>
+                                    </h3>
+                                    <p>
+                                        <span class="cart-quantity">1 <strong>&times;</strong></span>
+                                        <span class="cart-price">$80.00</span>
+                                    </p>
+                                </div>
+                                <button class="minicart-remove"><i class="lnr lnr-cross"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="minicart-pricing-box">
+
+                        <ul>
+
+                            <li class="total">
+                                <span>总计</span>
+                                <span><strong>$370.00</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="minicart-button">
+
+                        <a href="#"><i class="fa fa-share"></i>购买</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas mini cart end -->
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- All vendor & plugins & active js include here -->
+    <!--All Vendor Js -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- Active Js -->
+    <script src="assets/js/active.js"></script>
+
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.min.js" charset="utf-8"></script>
+    <script src="js/cropper.min.js" charset="utf-8"></script>
+    <script src="js/custom_up_img.js" charset="utf-8"></script>
+</body>
+
+</html>

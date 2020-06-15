@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <title></title>
+
+    <!--=== Favicon ===-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Google fonts include -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900%7CYesteryear"-->
+        <!--rel="stylesheet">-->
+
+    <!-- All Vendor & plugins CSS include -->
+    <link href="assets/css/vendor.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/vendor.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/globle.css" />
+
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+    <script src="assets/js/servlet_ajaxfabu.js"></script>
+
+    <script src="assets/js/tomyinfo_ajax.js"></script>
+
+   <!-- 引用控制层插件样式 -->
+
+
+  
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="/oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+      
+    <!-- Start Header Area -->
+    <header class="header-area">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+            <!-- header top start -->
+            <div class="header-top bdr-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="welcome-message">
+                                <p>欢迎来到卓越商城！</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <div class="header-top-settings">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top end -->
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-3">
+
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-6 position-static">
+
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+                        <div class="col-lg-3">
+                            <div class="header-configure-wrapper">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="offcanvas-btn">
+                                                <i class="lnr lnr-magnifier"></i>
+                                            </a>
+                                        </li>
+                                        <li class="user-hover">
+                                            <a href="#">
+                                                <i class="lnr lnr-user"></i>
+                                            </a>
+                                            <ul class="dropdown-list">
+                                                <li><a href="signin.html"></a>登录</li>
+                                                <li><a href="signup.html">注册</a></li>
+                                                <li><a href="#" onclick="saletomyinfo()">个人主页</a></li>
+                                            </ul>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+
+    </header>
+    <!-- end Header Area -->
+
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="btn-close-off-canvas">
+                <i class="lnr lnr-cross"></i>
+            </div>
+
+            <div class="off-canvas-inner">
+                <!-- search box start -->
+                <div class="search-box-offcanvas">
+                    <form>
+                        <input type="text" placeholder="Search Here...">
+                        <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                    </form>
+                </div>
+                <!-- search box end -->
+
+
+
+
+
+
+            </div>
+        </div>
+    </aside>
+    <!-- off-canvas menu end -->
+
+
+
+    <!-- main wrapper start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div class="breadcrumb-area common-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <h1>售卖商品</h1>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+
+        <!-- page main wrapper start -->
+        <div class="shop-main-wrapper section-space">
+            <div class="container">
+                <div class="row">
+                    <!-- product details wrapper start -->
+                    <div class="col-lg-12 order-1 order-lg-2">
+                        <!-- product details inner end -->
+                        <div class="product-details-inner">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <!--上传图片-->
+                                    <div style="padding: 100px;">
+                                        <ul class="upload-ul clearfix">
+                                            <li class="upload-pick">
+                                                <div class="webuploader-container clearfix" id="goodsUpload" onclick="judgepicnum()"></div>
+                                            </li>
+                                        </ul>
+                                    
+                                        <!--<p><a class="upload-btn" href="javascript:;">提交</a></p>-->
+                                    
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="product-details-des">
+                                        <h3 class="product-name">请上传你的商品</h3>
+                                        <p class="pro-desc">请对你即将发布的商品进行信息提供，我们会根据的信息为您安排合适的推荐售卖</p>
+
+
+
+
+
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h5>商品名称：</h5>
+                                            <div class="goodsName">
+                                                <input type="text" placeholder="请输入商品的名称" id="good_name">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="pro-size">
+                                            <h5>二手商品分类</h5>
+                                            <select class="nice-select" id="good_kind">
+                                                <option>二手手机</option>
+                                                <option>二手图书</option>
+                                                <option>数码</option>
+                                                <option>服饰鞋包</option>
+                                                <option>美妆闲置</option>
+                                                <option>家居家电</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="chooseTag">
+                                            <p>请输入标签名：</p>
+                                            <input type="text" class="chooseTagS" placeholder="不超过六个字" id="tag1">
+                                            <input type="text" class="chooseTagS" placeholder="不超过六个字" id="tag2">
+                                            <input type="text" class="chooseTagS" placeholder="不超过六个字" id="tag3">
+                                        </div>
+
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h5>预售价格：</h5>
+                                            <div class="quantity">
+                                                <div class="pro-qty"><input type="text" value="0" id="good_quantity"></div>
+                                            </div>
+                                            ￥
+                                        </div>
+
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h5>详情：</h5>
+                                            <div>
+                                                <div class="pro-des"><textarea rows="9" cols="16" id="good_des"></textarea></div>
+                                                
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="quantity-cart-box d-flex align-items-center">
+
+
+                                            <div class="action_link">
+                                                <a class="btn btn-cart2" href="#" onclick="uploadgood()">发布</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product details inner end -->
+
+                    </div>
+                    <!-- product details wrapper end -->
+                </div>
+            </div>
+        </div>
+        <!-- page main wrapper end -->
+
+
+
+
+    </main>
+    <!-- main wrapper end -->
+
+    <!-- Start Footer Area Wrapper -->
+    <footer class="footer-wrapper">
+
+
+
+
+    </footer>
+    <!-- End Footer Area Wrapper -->
+
+
+
+    <!-- offcanvas search form start -->
+    <div class="offcanvas-search-wrapper">
+        <div class="offcanvas-search-inner">
+            <div class="offcanvas-close">
+                <i class="lnr lnr-cross"></i>
+            </div>
+            <div class="container">
+                <div class="offcanvas-search-box">
+                    <form class="d-flex bdr-bottom w-100">
+                        <input type="text" placeholder="请输入要搜索的商品...">
+                        <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas search form end -->
+
+    <!-- offcanvas mini cart start -->
+    <div class="offcanvas-minicart-wrapper">
+        <div class="minicart-inner">
+            <div class="offcanvas-overlay"></div>
+            <div class="minicart-inner-content">
+                <div class="minicart-close">
+                    <i class="lnr lnr-cross"></i>
+                </div>
+                <div class="minicart-content-box">
+                    <div class="minicart-item-wrapper">
+                        <ul>
+                            <li class="minicart-item">
+                                <div class="minicart-thumb">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/cart/cart-1.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="minicart-content">
+                                    <h3 class="product-name">
+                                        <a href="product-details.html">Flowers bouquet pink for all flower lovers</a>
+                                    </h3>
+                                    <p>
+                                        <span class="cart-quantity">1 <strong>&times;</strong></span>
+                                        <span class="cart-price">$100.00</span>
+                                    </p>
+                                </div>
+                                <button class="minicart-remove"><i class="lnr lnr-cross"></i></button>
+                            </li>
+                            <li class="minicart-item">
+                                <div class="minicart-thumb">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/cart/cart-2.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="minicart-content">
+                                    <h3 class="product-name">
+                                        <a href="product-details.html">Jasmine flowers white for all flower lovers</a>
+                                    </h3>
+                                    <p>
+                                        <span class="cart-quantity">1 <strong>&times;</strong></span>
+                                        <span class="cart-price">$80.00</span>
+                                    </p>
+                                </div>
+                                <button class="minicart-remove"><i class="lnr lnr-cross"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="minicart-pricing-box">
+                        <ul>
+                            <li>
+                                <span>sub-total</span>
+                                <span><strong>$300.00</strong></span>
+                            </li>
+                            <li>
+                                <span>Eco Tax (-2.00)</span>
+                                <span><strong>$10.00</strong></span>
+                            </li>
+                            <li>
+                                <span>VAT (20%)</span>
+                                <span><strong>$60.00</strong></span>
+                            </li>
+                            <li class="total">
+                                <span>total</span>
+                                <span><strong>$370.00</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="minicart-button">
+                        <a href="#"><i class="fa fa-shopping-cart"></i> view cart</a>
+                        <a href="#"><i class="fa fa-share"></i> checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas mini cart end -->
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- All vendor & plugins & active js include here -->
+    <!--All Vendor Js -->
+ 
+ 
+    <script src="assets/js/active.js"></script> 
+
+    <script src="js/webuploader.min.js"></script>
+<script src="js/diyUpload.js"></script>
+<script>
+    $(function(){
+
+        //上传图片
+        var $tgaUpload = $('#goodsUpload').diyUpload({
+            url:'/uploadFilePath',
+            success:function( data ) { },
+            error:function( err ) { },
+            buttonText : '',
+            accept: {
+                title: "Images",
+                extensions: 'gif,jpg,jpeg,bmp,png'
+            },
+            thumb:{
+                width:120,
+                height:90,
+                quality:100,
+                allowMagnify:true,
+                crop:true,
+                type:"image/jpeg"
+            }
+        });
+
+
+    });
+</script>
+</body>
+
+</html>
