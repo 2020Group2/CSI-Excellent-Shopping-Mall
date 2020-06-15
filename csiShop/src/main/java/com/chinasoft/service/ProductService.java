@@ -12,5 +12,5 @@ public interface ProductService {
 	 * @return
 	 * Author：Zenghuqiang
 	 */
-	public List<Product> getProductByCategory(Product productCondition);
+	public List<Product> getProductList(Product productCondition);
 }

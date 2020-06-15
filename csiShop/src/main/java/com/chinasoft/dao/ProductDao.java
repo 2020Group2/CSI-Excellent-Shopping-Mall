@@ -13,7 +13,7 @@ public interface ProductDao {
 	 * @return
 	 * Author：Zenghuqiang
 	 */
-	List<Product> queryProductListByCategory(@Param("productCondition")Product productCondition);
+	List<Product> queryProductList(@Param("productCondition")Product productCondition);
 	
 	
 

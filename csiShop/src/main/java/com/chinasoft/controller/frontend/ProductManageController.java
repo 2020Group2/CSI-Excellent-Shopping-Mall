@@ -41,7 +41,7 @@ public class ProductManageController {
 			productCategory.setProductCategoryId(productCategoryId);
 			Product productCondition = new Product();
 			productCondition.setProductCategory(productCategory);
-			List<Product> productList = productService.getProductByCategory(productCondition);
+			List<Product> productList = productService.getProductList(productCondition);
 			if (productList.size() > 0) {
 				modelMap.put("productList", productList);
 				modelMap.put("success", true);
@@ -72,7 +72,7 @@ public class ProductManageController {
 			Product productCondition = new Product();
 			productCondition.setProductId(productId);
 			List<ProductImg> productImgList = productImgService.getProductImgById(productId);
-			List<Product> productList = productService.getProductByCategory(productCondition);
+			List<Product> productList = productService.getProductList(productCondition);
 			if (productList.size() > 0) {
 				modelMap.put("product", productList.get(0));
 				modelMap.put("productImgList", productImgList);

@@ -22,7 +22,7 @@ public class ProductDaoTest extends BaseTest{
 		ProductCategory productCategory = new ProductCategory();
 		productCategory.setProductCategoryId(51L);
 		productCondition.setProductCategory(productCategory);
-		List<Product> productList = productDao.queryProductListByCategory(productCondition);
+		List<Product> productList = productDao.queryProductList(productCondition);
 		assertEquals(2,productList.size());
 		for(Product product:productList) {
 			System.out.println(product.getProductName());
@@ -31,7 +31,7 @@ public class ProductDaoTest extends BaseTest{
 	
 	@Test
 	public void queryAllProductTest() {
-		List<Product> productList = productDao.queryProductListByCategory(null);
+		List<Product> productList = productDao.queryProductList(null);
 		assertEquals(true,productList.size()>0);
 		for(Product product:productList) {
 			System.out.println(product.getProductName());
@@ -42,7 +42,7 @@ public class ProductDaoTest extends BaseTest{
 	public void queryProductById() {
 		Product productCondition = new Product();
 		productCondition.setProductId(1L);
-		List<Product> productList = productDao.queryProductListByCategory(productCondition);
+		List<Product> productList = productDao.queryProductList(productCondition);
 		assertEquals(true,productList.size()>0);
 		for(Product product:productList) {
 			System.out.println(product.getProductName());

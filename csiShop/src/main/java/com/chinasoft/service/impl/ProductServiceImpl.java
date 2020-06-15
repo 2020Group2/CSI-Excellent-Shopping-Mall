@@ -15,8 +15,8 @@ public class ProductServiceImpl implements ProductService{
 	@Autowired
 	private ProductDao productDao;
 	@Override
-	public List<Product> getProductByCategory(Product productCondition) {
-		return productDao.queryProductListByCategory(productCondition);
+	public List<Product> getProductList(Product productCondition) {
+		return productDao.queryProductList(productCondition);
 	}
 
 }

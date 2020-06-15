@@ -12,10 +12,25 @@ public class Product {
 	private String normalPrice;
 	private String promotionPrice;
 	private Integer priority;
-	//-1£ºÉÌÆ·²»¿ÉÓÃ 0£ºÏÂ¼Ü 1£ºÔÚÇ°¶ËÏµÍ³Õ¹Ê¾
+	//0ï¼šè¡¨ç¤ºä¸‹æž¶  1ï¼šè¡¨ç¤ºä¸Šæž¶
 	private Integer enableStatus;
 	private ProductCategory productCategory;
 	private List<ProductImg> productImgList;
+	private Integer stock;
+	private Integer sales;
+	
+	public Integer getStock() {
+		return stock;
+	}
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+	public Integer getSales() {
+		return sales;
+	}
+	public void setSales(Integer sales) {
+		this.sales = sales;
+	}
 	public List<ProductImg> getProductImgList() {
 		return productImgList;
 	}
