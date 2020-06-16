@@ -14,9 +14,9 @@
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="gender" jdbcType="VARCHAR" property="gender" />
-    <result column="enableStatus" jdbcType="INT" property="enableStatus" />
-    <result column="createTime" jdbcType="DATETIME" property="createTime" />
-    <result column="lastEditTime" jdbcType="DATETIME" property="lastEditTime" />
+    <result column="enable_status" jdbcType="INT" property="enable_status" />
+    <result column="create_time" jdbcType="DATETIME" property="create_time" />
+    <result column="last_edit_time" jdbcType="DATETIME" property="last_edit_time" />
     <collection property="orderList" ofType="Order">
  				<result column="orderId" property="orderid"/>
  				<result column="ProductNumber" property="productNumber"/>
@@ -35,7 +35,7 @@
  				<result column="priority" property="priority"/>
  				<result column="createTime" property="createTime"/>
  				<result column="lastEditTime" property="lastEditTime"/>
- 				<result column="userId" property="userid"/>
+ 				<result column="user_id" property="user_id"/>
  	</collection>
  	 <collection property="shopCarList" ofType="shopCar">
  				<result column="shopCarId" property="shopcarid"/>
@@ -45,7 +45,7 @@
  				<result column="createTime" property="createTime"/>
  				<result column="lastEditTime" property="lastEditTime"/>
  				<result column="product" property="product"/>
- 				<result column="userId" property="userid"/>
+ 				<result column="user_id" property="user_id"/>
  	</collection>
  	<collection property="productCollectionList" ofType="ProductCollection">
  				<result column="collectionId" property="collectionid"/>
@@ -70,20 +70,30 @@
 			<if test="user_id != null">user_id,</if>
 			<if test="name != null">name,</if>
 			<if test="password != null">password,</if>
+			<if test="profileImg != null">profileImg,</if>
 			<if test="phone != null">phone,</if>
-			<if test="address != null">address,</if>
 			<if test="email != null">email,</if>
-			<if test="c_id != null">c_id,</if>
+			<if test="gender != null">gender,</if>
+			<if test="enable_status != null">enable_status,</if>
+			<if test="create_time != null">create_time,</if>
+			<if test="last_edit_time != null">last_edit_time,</if>
+			<if test="userAddressList != null">userAddressList,</if>
+			<if test="orderList != null">orderList,</if>
+			<if test="productCollectionList != null">productCollectionList,</if>
+			<if test="shopCarList != null">shopCarList,</if>
 		</trim>
 
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="id != null">#{id, jdbcType=INTEGER},</if>
-			<if test="username != null">#{username, jdbcType=VARCHAR},</if>
+			<if test="user_id != null">#{user_id, jdbcType=INTEGER},</if>
+			<if test="name != null">#{name, jdbcType=VARCHAR},</if>
 			<if test="password != null">#{password, jdbcType=VARCHAR},</if>
+			<if test="prifileImg != null">#{profileImg, jdbcType=VARCHAR},</if>
 			<if test="phone != null">#{phone, jdbcType=VARCHAR},</if>
-			<if test="address != null">#{address, jdbcType=VARCHAR},</if>
 			<if test="email != null">#{email, jdbcType=VARCHAR},</if>
-			<if test="c_id != null">#{c_id, jdbcType=INTEGER},</if>
+			<if test="gender != null">#{gender, jdbcType=VARCHAR},</if>
+			<if test="enable_status != null">#{enable_status, jdbcType=INTEGER},</if>
+			<if test="create_time != null">#{create_time, jdbcType=DATE},</if>
+			<if test="last_edit_time != null">#{last_edit_time, jdbcType=DATE},</if>
 		</trim>
 
 	</insert>
@@ -103,3 +113,5 @@
 	
 	
 </mapper>
+
+
