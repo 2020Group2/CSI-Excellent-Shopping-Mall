@@ -15,7 +15,7 @@ public class User {
 	private Date create_time;//账户创建时间
 	private Date last_edit_time;//上次编辑信息时间
 	private List<UserAddress> userAddressList;
-	private List<Order> orderList;
+	private List<UserOrder> orderList;
 	private List<ProductCollection> productCollectionList;
 	private List<ShopCar> shopCarList;
 	public Long getUser_id() {
@@ -84,10 +84,10 @@ public class User {
 	public void setUserAddressList(List<UserAddress> userAddressList) {
 		this.userAddressList = userAddressList;
 	}
-	public List<Order> getOrderList() {
+	public List<UserOrder> getOrderList() {
 		return orderList;
 	}
-	public void setOrderList(List<Order> orderList) {
+	public void setOrderList(List<UserOrder> orderList) {
 		this.orderList = orderList;
 	}
 	public List<ProductCollection> getProductCollectionList() {
@@ -104,7 +104,7 @@ public class User {
 	}
 	public User(Long user_id, String name, String password, String profileImg, String phone, String email,
 			String gender, Integer enable_status, Date create_time, Date last_edit_time,
-			List<UserAddress> userAddressList, List<Order> orderList, List<ProductCollection> productCollectionList,
+			List<UserAddress> userAddressList, List<UserOrder> orderList, List<ProductCollection> productCollectionList,
 			List<ShopCar> shopCarList) {
 		super();
 		this.user_id = user_id;
