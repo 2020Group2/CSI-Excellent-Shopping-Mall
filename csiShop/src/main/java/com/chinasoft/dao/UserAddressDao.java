@@ -6,7 +6,7 @@ import com.chinasoft.entity.UserAddress;
 
 public interface UserAddressDao {
 
-	//该方法只是用于数据库测试 
+	//鏌ヨ鐢ㄦ埛鍦板潃
 	List<UserAddress> queryUserAddress();
 	
 	

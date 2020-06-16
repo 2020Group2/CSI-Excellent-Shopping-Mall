@@ -12,7 +12,14 @@ public interface UserOrderDao {
 	 */
 	List<UserOrder> queryOrderList();
 	
+	/**
+	 * @return 后台更新的订单状态
+	 */
 	void updatestatus(UserOrder userOrder);
+	
+	/**
+	 * @return 后台更新的订单配送方式
+	 */	
 	void updateorderType(UserOrder userOrder);
 	
 }
