@@ -2,6 +2,7 @@ package com.chinasoft.dao;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Ignore;
@@ -87,6 +88,30 @@ public class ProductDaoTest extends BaseTest{
 		for(Product product:productList) {
 			System.out.println(product.getProductName());
 		}
+	}
+	
+	
+	//测试添加商品
+	@Test
+	public void insertProductTest() {
+		Product product = new Product();
+		product.setProductName("百事可乐");
+		product.setProductDesc("也很好喝");
+		product.setProductImg("TestImg");
+		product.setNormalPrice("150");//注意存储字段为String
+		product.setPromotionPrice("140");
+		product.setPriority(30);
+		product.setEnableStatus(1);
+		product.setCreateTime(new Date());
+		product.setCreateTime(new Date());
+		product.setStock(100);
+		product.setSales(0);
+		ProductCategory productCategory = new ProductCategory();
+		productCategory.setProductCategoryId(51L);
+		product.setProductCategory(productCategory);
+		int insert = productDao.insertProduct(product);
+		assertEquals(1,insert);
+		
 	}
 	
 	

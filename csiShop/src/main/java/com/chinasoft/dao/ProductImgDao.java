@@ -12,4 +12,7 @@ public interface ProductImgDao {
 	 * @return
 	 */
 	List<ProductImg> getProductImgById(long productId);
+	
+	//批量添加图片
+	int batchInsertProductImg(List<ProductImg> productImgList );
 }

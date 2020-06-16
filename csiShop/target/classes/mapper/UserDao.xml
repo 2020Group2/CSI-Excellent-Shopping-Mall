@@ -3,10 +3,12 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chinasoft.dao.UserDao">
-        <!-- 后台修改用户状态-->
-	<update id="updatestatus" parameterType="User">
+
+    <!-- 后台修改用户状态-->
+	<update id="updatestatus" parameterType="user">
 	    update user set enable_status =${enableStatus} where user_id = ${orderId}
 	</update>
+	
 	
 		<!-- User的结果集映射 -->
    <resultMap id="BaseResultMap" type="com.chinasoft.entity.User">
@@ -59,15 +61,15 @@
  	</collection> 
   </resultMap>
 
-	
+
 	<!-- 登录功能 -->
-	<select id="login" parameterType="String"  resultType="User">
+	<select id="login" parameterType="String"  resultType="user">
 		SELECT * FROM `user` WHERE name = #{name}
 	</select>
 	
 	
 	<!-- 注册功能 -->
-	<insert id="InsertUserDynamic" parameterType="User">
+	<insert id="InsertUserDynamic" parameterType="user">
 		insert into user
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="user_id != null">user_id,</if>
@@ -100,4 +102,5 @@
 		</trim>
 
 	</insert>
+	
 </mapper>

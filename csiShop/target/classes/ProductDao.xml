@@ -48,7 +48,17 @@
 		ORDER BY
 		create_time DESC
 		LIMIT 0,#{size}	
-		
 	</select>
+	
+	<insert id="insertProduct"
+		parameterType="product" useGeneratedKeys="true"
+		keyColumn="product_id" keyProperty="productId">
+		INSERT INTO
+		product(product_name,product_desc,product_img,normal_price,promotion_price,priority,
+		create_time,last_edit_time,enable_status,product_category_id)
+		VALUES
+		(#{productName},#{productDesc},#{productImg},#{normalPrice},#{promotionPrice},#{priority},
+		#{createTime},#{lastEditTime},#{enableStatus},#{productCategory.productCategoryId})
+	</insert>
 	
 </mapper>

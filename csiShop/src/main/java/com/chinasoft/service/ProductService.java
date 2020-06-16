@@ -2,7 +2,10 @@ package com.chinasoft.service;
 
 import java.util.List;
 
+import com.chinasoft.dto.ImageHolder;
+import com.chinasoft.dto.ProductExecution;
 import com.chinasoft.entity.Product;
+
 
 public interface ProductService {
 	public int addProductCategoryById(Product product);
@@ -40,4 +43,13 @@ public interface ProductService {
 	 * Author：Zenghuqiang
 	 */
 	public List<Product> getNewestProductList(int size);
+	
+	/**
+	 * 商品添加功能
+	 * @param product
+	 * @param image
+	 * @param imageList
+	 * @return
+	 */
+	public ProductExecution addProduct(Product product, ImageHolder image, List<ImageHolder> imageList);
 }

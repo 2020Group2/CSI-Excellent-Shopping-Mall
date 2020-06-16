@@ -70,4 +70,7 @@ public interface ProductDao {
 	 */
 	List<Product> newestProductList(int size);
 	
+	//插入商品
+	int insertProduct(Product product);
+	
 }
