@@ -1,5 +1,10 @@
 package com.chinasoft.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.chinasoft.dao.ProductCategoryDao;
 import com.chinasoft.entity.ProductCategory;
 import com.chinasoft.service.ProductCategoryService;
@@ -10,8 +15,10 @@ import com.chinasoft.service.ProductCategoryService;
  * @author THQ
  *
  */
+@Service
 public class ProductCategoryServiceImpl implements ProductCategoryService{
 
+	@Autowired
 	private ProductCategoryDao productCategoryDao;
 	
 	public int addProductCategoryById(ProductCategory productCategory) {
@@ -33,6 +40,10 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
 	public ProductCategory getProductCategoryById(Long id) {
 		// TODO Auto-generated method stub
 		return productCategoryDao.getProductCategoryById(id);
+	}
+
+	public List<ProductCategory> getProductCategoryList(ProductCategory productaCategoryCondition) {
+		return productCategoryDao.queryProductCategory(productaCategoryCondition);
 	}
 	
 	

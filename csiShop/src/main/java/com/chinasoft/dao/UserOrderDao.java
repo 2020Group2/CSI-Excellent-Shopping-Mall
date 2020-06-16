@@ -14,4 +14,5 @@ public interface UserOrderDao {
 	
 	void updatestatus(UserOrder userOrder);
 	void updateorderType(UserOrder userOrder);
+	
 }

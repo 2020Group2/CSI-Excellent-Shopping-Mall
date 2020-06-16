@@ -5,5 +5,5 @@ import java.util.List;
 import com.chinasoft.entity.ProductCollection;
 
 public interface ProductCollectionDao {
-	List<ProductCollection> getProductCollectionList();
+	public List<ProductCollection> queryProductCollection();
 }

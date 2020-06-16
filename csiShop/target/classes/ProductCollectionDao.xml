@@ -3,5 +3,16 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chinasoft.dao.ProductCollectionDao">
-	
+	<select id="queryProductCollection" resultType="com.chinasoft.entity.ProductCollection" resultMap="queryCollection">
+	    select *
+		from product_collection,user
+		where product_collection.user_id = user.user_id
+		ORDER BY collection_id
+	</select>
+	<resultMap type="ProductCollection" id="queryCollection">
+      
+       <association property="user" javaType="user">
+           
+       </association>
+    </resultMap>
 </mapper>

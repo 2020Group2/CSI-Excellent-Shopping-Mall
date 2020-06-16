@@ -1,48 +1,73 @@
 package com.chinasoft.dao;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.chinasoft.entity.Product;
 
 /**
- * ÉÌÆ·Dao²ãĞÅÏ¢
+ * ï¿½ï¿½Æ·Daoï¿½ï¿½ï¿½ï¿½Ï¢
  * @author THQ
  *
  */
-@Repository
+
 public interface ProductDao {
 	/**
-	 * 1Ìí¼ÓÉÌÆ·
+	 * 1ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
 	 * @param productCategory
 	 * @return
 	 */
 	public int addProductCategoryById(Product product);
 	
 	/**
-	 * 2±à¼­ÉÌÆ·
+	 * 2ï¿½à¼­ï¿½ï¿½Æ·
 	 * @param productCategory
 	 * @return
 	 */
 	public int editProductById(Product product);
 	
 	/**
-	 * 3É¾³ıÉÌÆ·
+	 * 3É¾ï¿½ï¿½ï¿½ï¿½Æ·
 	 * @param id
 	 * @return
 	 */
 	public int deleteProductById(Long id);
 	
 	/**
-	 * 4¶àÌõ¼şËÑË÷´Ê²éÑ¯ÉÌÆ·
+	 * 4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²ï¿½Ñ¯ï¿½ï¿½Æ·
 	 * @param queMap
 	 * @return
 	 */
 	/* public List<Product> findList(Map<String, Object> queryMap); */
 	
 	/**
-	 * 6¸ù¾İid²éÑ¯ÉÌÆ·
+	 * 6ï¿½ï¿½ï¿½ï¿½idï¿½ï¿½Ñ¯ï¿½ï¿½Æ·
 	 * @param id
 	 * @return
 	 */
 	public Product getProductById(Long id);
+	
+	/**
+	 * æ ¹æ®ä¼ å…¥productConditionæ¡ä»¶æ¥ç­›é€‰å•†å“
+	 * @param productCategoryId
+	 * @return
+	 * Authorï¼šZenghuqiang
+	 */
+	List<Product> queryProductList(@Param("productCondition")Product productCondition);
+	
+	/**
+	 * è·å–çƒ­é”€å•†å“
+	 * @return
+	 * Authorï¼šZenghuqiang
+	 */
+	List<Product> hotSaleProductList(int size);
+	
+	/**
+	 * è·å–æœ€æ–°å•†å“
+	 * @return
+	 * Authorï¼šZenghuqiang
+	 */
+	List<Product> newestProductList(int size);
 	
 }

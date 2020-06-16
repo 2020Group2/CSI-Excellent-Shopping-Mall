@@ -3,33 +3,52 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chinasoft.dao.ProductDao">
-	<select id="getProductById" parameterType="Long" resultType="product">
-		SELECT
-		product_id,********
+	<select id="queryProductList" resultType="product">
+		SElECT
+		product_id, product_name, product_desc,product_img,normal_price, promotion_price,priority,enable_status,product_category_id,create_time,last_edit_time
 		FROM
 		product
+		<where>
+			<!-- 如果传入null则返回所有商品 -->
+			<if test="productCondition==null">
+				AND product_id is not null
+			</if>
+			<if test="productCondition!=null and productCondition.productCategory!=null">
+				AND product_category_id = #{productCondition.productCategory.productCategoryId}
+			</if>
+			<if test="productCondition!=null and productCondition.productId !=null">
+				AND product_id = #{productCondition.productId}
+			</if>
+			<if test="productCondition!=null and productCondition.productName !=null">
+				AND product_Name like '%${productCondition.productName}%'
+			</if>
+
+		</where>
+		AND enable_status = 1
+		ORDER BY
+		priority DESC
+	</select>
+	<select id="hotSaleProductList" resultType="product">
+		SELECT
+		product_id, product_name, product_desc,product_img,normal_price, promotion_price,priority,enable_status,product_category_id,create_time,last_edit_time
+		FROM product
 		WHERE
-		product_id = #{productId}
+		enable_status = 1
+		ORDER BY
+		sales DESC
+		LIMIT 0,#{size}	
 	</select>
 	
-	<delete id="deleteProductById" parameterType="Long">
-		delete
-		****
-		From
-		product
-		Where
-		product_id = #{productId}
-	</delete>
-	
-	<insert id="addProductById" keyProperty="productId">
-		insert into	
-		product
+	<select id="newestProductList" resultType="product">
+		SELECT 
+		product_id, product_name, product_desc,product_img,normal_price, promotion_price,priority,enable_status,product_category_id,create_time,last_edit_time
+		FROM product
+		WHERE
+		enable_status = 1
+		ORDER BY
+		create_time DESC
+		LIMIT 0,#{size}	
 		
-		
-	</insert>
-	
-	<update id="editProductById">
-	
-	</update>
+	</select>
 	
 </mapper>
