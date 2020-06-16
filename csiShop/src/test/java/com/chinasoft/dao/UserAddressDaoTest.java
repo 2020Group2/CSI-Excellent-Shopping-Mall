@@ -25,6 +25,5 @@ public class UserAddressDaoTest extends BaseTest{
 		assertEquals(2,list.size());
 	}
 	
-
 	
 }
