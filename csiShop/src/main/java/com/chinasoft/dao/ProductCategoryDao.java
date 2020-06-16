@@ -1,18 +1,54 @@
 package com.chinasoft.dao;
-
-import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import com.chinasoft.entity.ProductCategory;
 
+/**
+ * ÉÌÆ··ÖÀàDao²ã
+ * @author THQ
+ *
+ */
+@Repository
 public interface ProductCategoryDao {
-
 	/**
-	 * Author:Zenghuqiang
-	 * æ ¹æ®ä¼ å…¥çš„productCategoryConditionè¿›è¡Œå•†å“ç±»åˆ«çš„æ¡ä»¶æŸ¥è¯¢
-	 * @return å•†å“ç±»åˆ«çš„list
+	 * 1Ìí¼ÓÉÌÆ··ÖÀà
+	 * @param productCategory
+	 * @return
 	 */
-	List<ProductCategory> queryProductCategory(@Param("productCategoryCondition") ProductCategory productCategoryCondition);
+	public int addProductCategoryById(ProductCategory productCategory);
 	
+	/**
+	 * 2±à¼­ÉÌÆ··ÖÀà
+	 * @param productCategory
+	 * @return
+	 */
+	public int editProductCategoryById(ProductCategory productCategory);
+	
+	/**
+	 * 3É¾³ıÉÌÆ··ÖÀà
+	 * @param id
+	 * @return
+	 */
+	public int deleteProductCategoryById(Long id);
+	
+	/**
+	 * 4¶àÌõ¼şËÑË÷´Ê²éÑ¯ÉÌÆ··ÖÀà
+	 * @param queMap
+	 * @return
+	 */
+	/* public List<ProductCategory> findList(Map<String, Object> queMap); */
+	
+	/**
+	 * 5»ñÈ¡·ûºÏÌõ¼şµÄ×Ü¼ÇÂ¼Êı
+	 * @param queryMap
+	 * @return
+	 */
+	/* public Integer getTotal(Map<String, Object> queryMap); */
+	
+	/**
+	 * 6¸ù¾İid²éÑ¯ÉÌÆ··ÖÀà
+	 * @param id
+	 * @return
+	 */
+	public ProductCategory getProductCategoryById(Long id);
 }

@@ -1,30 +1,39 @@
 package com.chinasoft.service.impl;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.chinasoft.dao.ProductDao;
 import com.chinasoft.entity.Product;
 import com.chinasoft.service.ProductService;
 
-@Service
-public class ProductServiceImpl implements ProductService{
 
-	@Autowired
+/**
+ * productservicelmpl
+ * @author THQ
+ *
+ */
+public class ProductServiceImpl implements ProductService{
+	
 	private ProductDao productDao;
-	@Override
-	public List<Product> getProductList(Product productCondition) {
-		return productDao.queryProductList(productCondition);
+
+	public int addProductCategoryById(Product product) {
+		// TODO Auto-generated method stub
+		return productDao.addProductCategoryById(product);
 	}
-	@Override
-	public List<Product> getHotProductList(int size) {
-		return productDao.hotSaleProductList(size);
+
+	public int editProductById(Product product) {
+		// TODO Auto-generated method stub
+		return productDao.editProductById(product);
 	}
-	@Override
-	public List<Product> getNewestProductList(int size) {
-		return productDao.newestProductList(size);
+
+	public int deleteProductById(Long id) {
+		// TODO Auto-generated method stub
+		return productDao.deleteProductById(id);
 	}
+
+	public Product getProductById(Long id) {
+		// TODO Auto-generated method stub
+		return productDao.getProductById(id);
+	}
+	
+
 
 }
