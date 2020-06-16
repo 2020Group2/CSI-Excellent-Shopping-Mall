@@ -18,8 +18,38 @@ public class User {
 	private List<Order> orderList;
 	private List<ProductCollection> productCollectionList;
 	private List<ShopCar> shopCarList;
+<<<<<<< Updated upstream
 	public Long getUser_id() {
 		return user_id;
+=======
+	
+	public List<Order> getOrderList() {
+		return orderList;
+	}
+	public void setOrderList(List<Order> orderList) {
+		this.orderList = orderList;
+	}
+	public List<ProductCollection> getProductCollectionList() {
+		return productCollectionList;
+	}
+	public void setProductCollectionList(List<ProductCollection> productCollectionList) {
+		this.productCollectionList = productCollectionList;
+	}
+	public List<ShopCar> getShopCarList() {
+		return shopCarList;
+	}
+	public void setShopCarList(List<ShopCar> shopCarList) {
+		this.shopCarList = shopCarList;
+	}
+	public List<UserAddress> getUserAddressList() {
+		return userAddressList;
+	}
+	public void setUserAddressList(List<UserAddress> userAddressList) {
+		this.userAddressList = userAddressList;
+	}
+	public Long getUserId() {
+		return userId;
+>>>>>>> Stashed changes
 	}
 	public void setUser_id(Long user_id) {
 		this.user_id = user_id;
@@ -78,6 +108,7 @@ public class User {
 	public void setLast_edit_time(Date last_edit_time) {
 		this.last_edit_time = last_edit_time;
 	}
+<<<<<<< Updated upstream
 	public List<UserAddress> getUserAddressList() {
 		return userAddressList;
 	}
@@ -134,6 +165,8 @@ public class User {
 				+ userAddressList + ", orderList=" + orderList + ", productCollectionList=" + productCollectionList
 				+ ", shopCarList=" + shopCarList + "]";
 	}
+=======
+>>>>>>> Stashed changes
 	
 	
 	
