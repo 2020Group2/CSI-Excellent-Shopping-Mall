@@ -1,32 +1,17 @@
 package com.chinasoft.service;
 
-import java.util.List;
-
 import com.chinasoft.entity.Product;
 
 public interface ProductService {
+	public int addProductCategoryById(Product product);
+	
+	public int editProductById(Product product);
+	
+	public int deleteProductById(Long id);
 
-	/**
-	 * 根据productCategoryId获取商品集合
-	 * @param productCategoryId
-	 * @return
-	 * Author：Zenghuqiang
-	 */
-	public List<Product> getProductList(Product productCondition);
+	/* public List<Product> findList(Map<String, Object> queryMap); */
 	
-	/**
-	 * 获取热销榜前size的商品集合
-	 * @param size
-	 * @return
-	 * Author：Zenghuqiang
-	 */
-	public List<Product> getHotProductList(int size);
+	public Product getProductById(Long id);
 	
-	/**
-	 * 获取最新商品中前size的商品集合
-	 * @param size
-	 * @return
-	 * Author：Zenghuqiang
-	 */
-	public List<Product> getNewestProductList(int size);
+	/* public int updateNum(Product product); */
 }
