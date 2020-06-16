@@ -12,27 +12,26 @@
 	
 		<!-- User的结果集映射 -->
    <resultMap id="BaseResultMap" type="com.chinasoft.entity.User">
-    <id column="user_id" jdbcType="INT" property="user_id" />
+    <id column="user_id" jdbcType="INT" property="userId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="profileImg" jdbcType="VARCHAR" property="profileImg" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="gender" jdbcType="VARCHAR" property="gender" />
-    <result column="enable_status" jdbcType="INT" property="enable_status" />
-    <result column="create_time" jdbcType="DATETIME" property="create_time" />
-    <result column="last_edit_time" jdbcType="DATETIME" property="last_edit_time" />
+    <result column="enable_status" jdbcType="INT" property="enableStatus" />
+    <result column="create_time" jdbcType="DATETIME" property="createTime" />
+    <result column="last_edit_time" jdbcType="DATETIME" property="lastEditTime" />
     <collection property="orderList" ofType="Order">
- 				<result column="orderId" property="orderid"/>
- 				<result column="ProductNumber" property="productNumber"/>
- 				<result column="orderPrice" property="orderPrice"/>
- 				<result column="orderDesc" property="orderDesc"/>
+ 				<result column="order_id" property="orderid"/>
+ 				<result column="product_Number" property="productNumber"/>
+ 				<result column="order_price" property="orderPrice"/>
+ 				<result column="order_desc" property="orderDesc"/>
  				<result column="comments" property="comments"/>
- 				<result column="enableStatus" property="enableStatus"/>
- 				<result column="createTime" property="createTime"/>
- 				<result column="lastEditTime" property="lastEditTime"/>
- 				<result column="product" property="product"/>
- 				<result column="user" property="user"/>
+ 				<result column="create_time" property="createTime"/>
+ 				<result column="last_edit_time" property="lastEditTime"/>
+ 				<result column="product_id" property="product"/>
+ 				<result column="user_id" property="user"/>
  	</collection>
  	 <collection property="userAddressList" ofType="UserAddress">
  				<result column="AddrId" property="addrid"/>
@@ -61,6 +60,7 @@
  	</collection> 
   </resultMap>
 
+<<<<<<< HEAD
 
 	<!-- 登录功能 -->
 	<select id="login" parameterType="String"  resultType="user">
@@ -102,5 +102,241 @@
 		</trim>
 
 	</insert>
+=======
+	
+	
+	
+	
+	  <!-- 基础数据内容 -->
+  <sql id="Base_Column_List" >
+    user_id, name, password, profile_img, phone, email, gender, enable_status, create_time, last_edit_time
+  </sql>
+  
+  
+  
+  
+  <!-- 通过id查询用户信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{user_id,jdbcType=INTEGER}
+  </select>
+  
+  
+  
+  
+  
+  <!-- 登录功能：使用用户名和密码登录 -->
+    <select id="login" resultMap="BaseResultMap">
+      SELECT
+      <include refid="Base_Column_List"/>
+      FROM user
+      WHERE name=#{name} and password=#{password}
+    </select>
+    
+    
+    
+    <!-- 检查用户名是否存在 -->
+  <select id="checkUsername" resultType="java.lang.Integer">
+    SELECT count(1) FROM user WHERE name=#{name}
+  </select>
+  
+  
+  <!-- 检查用户邮箱是否存在 -->
+  <select id="checkUserEmail" resultType="java.lang.Integer">
+    SELECT count(1) FROM user where email=#{email}
+  </select>
+  
+  
+  <!--  -->
+  <select id="checkPhone" resultType="java.lang.String">
+    SELECT count(1) FROM user WHERE phone=#{phone}
+  </select>
+   
+  
+  <select id="selectUserByUsernameAndPassword" resultMap="BaseResultMap" parameterType="map">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM user
+    WHERE name=#{name} and password=#{password}
+    
+    
+    
+    
+  </select>
+    <select id="selectAdminUser" resultMap="BaseResultMap" parameterType="map">
+      SELECT
+      <include refid="Base_Column_List"/>
+      FROM user
+      where name=#{name} and password=#{password} and enable_status=#{enable_status};
+    </select>
+    
+    
+    <select id="selectAllUser" resultMap="BaseResultMap">
+      SELECT
+      <include refid="Base_Column_List"/>
+      FROM user
+    </select>
+    
+    
+    
+    <select id="countUser" resultType="java.lang.Integer">
+      SELECT
+      count(1) FROM user
+      WHERE enable_status=1
+    </select>
+    
+    
+    
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user
+    where user_id = #{user_id,jdbcType=INTEGER}
+  </delete>
+  
+  
+  <insert id="insert" parameterType="com.chinasoft.entity.User" >
+    insert into user ( user_id, name, password, profile_img, phone,
+     email, gender, enable_status, create_time, last_edit_time)
+    values (#{user_id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+     #{prifile_img,jdbcType=VARCHAR},  #{phone,jdbcType=VARCHAR},
+      #{email,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR},
+      #{enable_status,jdbcType=INTEGER}, now(),now())
+  </insert>
+  
+  
+  <insert id="insertSelective" parameterType="com.chinasoft.entity.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="user_id != null" >
+        user_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="profile_img != null" >
+        profile_img,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="enable_status != null" >
+        enable_status,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="user_id != null" >
+        #{user_id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="profile_img != null" >
+        #{profile_img,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="enable_status != null" >
+        #{enable_status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        now(),
+      </if>
+      <if test="updateTime != null" >
+        now(),
+      </if>
+    </trim>
+  </insert>
+  
+  
+  
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.chinasoft.entity.User" >
+    update user
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="profile_img != null" >
+        profile_img = #{profile_img,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="enable_status != null" >
+        enable_status = #{enable_status,jdbcType=INTEGER},
+      </if>
+      <if test="create_time != null" >
+        create_time = #{create_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="last_edit_time != null" >
+        last_edit_time = now(),
+      </if>
+    </set>
+    where user_id = #{user_id,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  
+  
+  <update id="updateByPrimaryKey" parameterType="com.chinasoft.entity.User" >
+    update user
+    set name = #{name,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      profile_img = #{profile_img,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      enable_status = #{enable_status,jdbcType=INTEGER},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      last_edit_time = now()
+    where user_id = #{user_id,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  <update id="resetPassword" parameterType="map">
+    UPDATE user
+    SET password=#{password}
+    where name=#{name}
+  </update>
+	
+	
+>>>>>>> a737924... 6.16
 	
 </mapper>
