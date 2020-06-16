@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chinasoft.entity.UserOrder;
 import com.chinasoft.service.UserOrderService;
-import com.chinasoft.util.HttpServletRequestUtil;
 
 @Controller
 @RequestMapping("/superuserorder")
@@ -26,8 +25,8 @@ public class UserOrderController {
 	@RequestMapping(value = "/listUserOrder",method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String, Object> listUserOrder(){
-		Map<String, Object> modelMap = new HashMap<>();
-		List<UserOrder> list = new ArrayList<>();
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		List<UserOrder> list = new ArrayList<UserOrder>();
 		try {			
 			list = userOrderService.getUserOrderList();
 			modelMap.put("data", list);
@@ -41,7 +40,7 @@ public class UserOrderController {
 	@ResponseBody
 	private Map<String, Object> updateUserOrderStatus(HttpServletRequest request){
 		Map<String,Object> modelMap = new HashMap<String,Object>();
-		int productSt = HttpServletRequestUtil.getInt(request, "productSt");
+		
 		return modelMap;		
 		
 	}
