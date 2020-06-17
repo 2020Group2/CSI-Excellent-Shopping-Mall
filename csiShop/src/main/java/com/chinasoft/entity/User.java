@@ -6,6 +6,7 @@ import java.util.List;
 public class User {
 	private Long userId;
 	private String name;
+	private String password;
 	private String profileImg;
 	private String phone;
 	private String email;

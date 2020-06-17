@@ -59,52 +59,6 @@
  				<result column="lastEditTime" property="lastEditTime"/>	
  	</collection> 
   </resultMap>
-
-<<<<<<< HEAD
-
-	<!-- 登录功能 -->
-	<select id="login" parameterType="String"  resultType="user">
-		SELECT * FROM `user` WHERE name = #{name}
-	</select>
-	
-	
-	<!-- 注册功能 -->
-	<insert id="InsertUserDynamic" parameterType="user">
-		insert into user
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="user_id != null">user_id,</if>
-			<if test="name != null">name,</if>
-			<if test="password != null">password,</if>
-			<if test="profileImg != null">profileImg,</if>
-			<if test="phone != null">phone,</if>
-			<if test="email != null">email,</if>
-			<if test="gender != null">gender,</if>
-			<if test="enable_status != null">enable_status,</if>
-			<if test="create_time != null">create_time,</if>
-			<if test="last_edit_time != null">last_edit_time,</if>
-			<if test="userAddressList != null">userAddressList,</if>
-			<if test="orderList != null">orderList,</if>
-			<if test="productCollectionList != null">productCollectionList,</if>
-			<if test="shopCarList != null">shopCarList,</if>
-		</trim>
-
-		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="user_id != null">#{user_id, jdbcType=INTEGER},</if>
-			<if test="name != null">#{name, jdbcType=VARCHAR},</if>
-			<if test="password != null">#{password, jdbcType=VARCHAR},</if>
-			<if test="prifileImg != null">#{profileImg, jdbcType=VARCHAR},</if>
-			<if test="phone != null">#{phone, jdbcType=VARCHAR},</if>
-			<if test="email != null">#{email, jdbcType=VARCHAR},</if>
-			<if test="gender != null">#{gender, jdbcType=VARCHAR},</if>
-			<if test="enable_status != null">#{enable_status, jdbcType=INTEGER},</if>
-			<if test="create_time != null">#{create_time, jdbcType=DATE},</if>
-			<if test="last_edit_time != null">#{last_edit_time, jdbcType=DATE},</if>
-		</trim>
-
-	</insert>
-=======
-	
-	
 	
 	
 	  <!-- 基础数据内容 -->
@@ -335,8 +289,5 @@
     SET password=#{password}
     where name=#{name}
   </update>
-	
-	
->>>>>>> a737924... 6.16
 	
 </mapper>

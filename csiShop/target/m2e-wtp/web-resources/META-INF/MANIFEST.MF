@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: ZengHuqiang
-=======
 Built-By: 13060
->>>>>>> a737924... 6.16
 Build-Jdk: 1.8.0_31
 Created-By: Maven Integration for Eclipse
 
